@@ -52,7 +52,7 @@ if headline:
 
 api_response = "Sep 04, 2023 - 11:59 PM"
 
-event_datetime = re.search(r"(\w{3} \d{2}, \d{4}) - (\d{2}:\d{2} [AP]M)", api_response)
+event_datetime = re.search(r"((\w{3} \d{2}, \d{4}) - (0|1)[0-9]:(0|1|2|3|4|5)[0-9] [AP]M)", api_response)
 if event_datetime:
     event_date = event_datetime.group(1)
     event_time = event_datetime.group(2)
