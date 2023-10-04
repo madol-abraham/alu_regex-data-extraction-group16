@@ -63,6 +63,6 @@ if event_datetime:
 
 api_response = "m.madol@alustudent.com"
 
-email = re.search(r"(\w+@\w+\.\w+)", api_response)
+email = re.search(r"(^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}))", api_response)
 if email:
     print("Email:", email.group(1))
