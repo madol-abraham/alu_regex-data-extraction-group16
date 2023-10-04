@@ -21,7 +21,7 @@ print("Ingredients:", ingredients)
 
 api_response = "rgb(255, 255, 255)"
 
-rgb_values = re.findall(r"\d{1,3}", api_response)
+rgb_values = re.findall(r"^rgb\((\d{3}),\s(\d{3}),\s(\d{3})\)", api_response)
 print("RGB Values:", rgb_values)
 
 # 4.Social Meadia usernames:
